@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, staging, release/*]
+  pull_request:
+    branches: [main, master, staging]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - run: bun install --frozen-lockfile
+      - run: bun --eval "await import('./lib/matrix.ts'); await import('./lib/flight.ts'); await import('./routes/echo/index.ts'); await import('./routes/flatten/index.ts'); await import('./routes/invert/index.ts'); await import('./routes/multiply/index.ts'); await import('./routes/sum/index.ts'); await import('./routes/flights/search/index.ts');"
