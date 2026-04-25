@@ -1,9 +1,6 @@
 {
   "name": "matrix",
-  "version": "0.0.2",
-  "dependencies": {
-    "@vyckr/tachyon": "0.3.0"
-  },
+  "version": "0.0.3",
   "devDependencies": {
     "@types/bun": "1.1.13"
   }
