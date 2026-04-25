@@ -4,6 +4,6 @@ export default class Sum {
 
     static async POST(form: { file: string }) {
 
-        return await Matrix.ProcessMatrix(form, matrix => matrix.Sum())
+        return await Matrix.processMatrix(form, matrix => matrix.sum())
     }
 }

@@ -1,10 +1,7 @@
 {
-    "name": "matrix",
-    "version": "0.0.1",
-    "dependencies": {
-        "@vyckr/tachyon": "0.3.0"
-    },
-    "devDependencies": {
-        "@types/bun": "1.1.13"
-    }
+  "name": "matrix",
+  "version": "0.0.3",
+  "devDependencies": {
+    "@types/bun": "1.1.13"
+  }
 }

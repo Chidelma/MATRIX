@@ -4,6 +4,6 @@ export default class Echo {
 
     static async POST(form: { file: string }) {
 
-        return await Matrix.ProcessMatrix(form, matrix => matrix.String())
+        return await Matrix.processMatrix(form, matrix => matrix.toString())
     }
 }
